@@ -1,12 +1,13 @@
 package org.mateusz;
 import java.io.*;
 import java.util.HashMap;
-import java.util.Map;
+
+//klasa zawierająca hashmapę z kluczami users i wartościami password oraz metodę ich wczytywania z pliku loginy.csv
 
 public class Logins {
-    HashMap<String, String> logins = new HashMap<>();
+    HashMap<String, String> logins = new HashMap<>(); //utworzenie hash mapy
 
-    void readFromFIle() {
+    void readFromFIle() { //wczytanie danych users i haseł do hash mapy
         try {
             String line;
             BufferedReader br = new BufferedReader(new FileReader("loginy.csv"));
@@ -19,8 +20,5 @@ public class Logins {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*for (Map.Entry<String, String> entry : logins.entrySet()) {
-            System.out.println(entry.getKey() + "/" + entry.getValue());
-        }*/
     }
 }
