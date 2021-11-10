@@ -10,10 +10,9 @@ public class Logins {
         try {
             String line;
             BufferedReader br = new BufferedReader(new FileReader("loginy.csv"));
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
                 String[] temp = line.split(";");
-                logins.put(temp[0],temp[1]);
+                logins.put(temp[0], temp[1]);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
